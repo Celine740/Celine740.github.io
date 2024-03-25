@@ -7,50 +7,50 @@
     <title>My Hobby Website</title>
     <style>
         a {
-            text-decoration: none; 
+            text-decoration: none;
+            color:#f4fbfb;
         }
 
-        p{
+        p {
             line-height: 1.5;
         }
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f5f5; 
+            background-color: #87b7e7;
             color: #333;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #6db6b9; 
-            color: white;
+            background-color: #BEDBFA;
+            color: #040A11;
             padding: 20px;
             text-align: center;
         }
 
         nav {
-            background-color: #88c4c7; 
+            background-color: #769ac1;
             color: white;
             text-align: center;
             padding: 10px 0;
         }
 
         nav a {
-            color: white;
+            color: #040A11;
             text-decoration: none;
             padding: 10px 20px;
         }
 
         nav a:hover {
-            background-color: #a8d4d7; 
+            background-color: #7db5f2;
         }
 
         footer {
-            background-color: #6db6b9; 
-            color: white;
+            background-color: #769ac1;
+            color: #121111;
             text-align: center;
-            padding: 10px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -58,12 +58,12 @@
 
         section {
             padding: 20px;
-            margin: 20px 0;
-            background-color: #fff;
+            margin: 40px 0px;
+            background-color: #BEDBFA;
         }
 
         h2 {
-            color: #6db6b9; 
+            color: #040A11;
         }
 
         h3 {
@@ -76,8 +76,9 @@
 
         figcaption {
             font-style: italic;
-            color: #777;
+            color: #334D67;
         }
+     
     </style>
 </head>
 
@@ -86,18 +87,28 @@
         <h1>Travel in Japan</h1>
     </header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#who">Who</a>
-        <a href="#when">When</a>
-        <a href="#where">Where</a>
-        <a href="#how">How</a>
-        <a href="#why">Why</a>
+        <a href="#home" onclick="showSection('home')">Home</a>
+        <a href="#who" onclick="showSection('who')">Who</a>
+        <a href="#when" onclick="showSection('when')">When</a>
+        <a href="#where" onclick="showSection('where')">Where</a>
+        <a href="#how" onclick="showSection('how')">How</a>
+        <a href="#why" onclick="showSection('why')">Why</a>
+        <a href="#AI" onclick="showSection('AI')">AI Prompts</a>
     </nav>
+    
     <main>
         <section id="home">
             <h2>What</h2>
             <h3>Traveling</h3>
-            <p>One of my passions is traveling because it brings me a sense of freshness, allowing me to explore diverse landscapes, indulge in different cuisines, and encounter a variety of people, thereby enabling me to experience the world from multiple perspectives. And my absolute favorite destination for travel is Japan! The rich cultural tapestry, stunning natural beauty, and the blend of tradition with modernity make Japan an irresistible magnet for me. From the serene temples of Kyoto to the bustling streets of Tokyo, every corner of Japan offers something unique and captivating. Whether it's savoring the exquisite flavors of sushi or immersing myself in the vibrant energy of Harajuku, Japan never fails to leave a lasting impression on me.</p>
+            <p>One of my passions is traveling because it brings me a sense of freshness, allowing me to explore diverse
+                landscapes, indulge in different cuisines, and encounter a variety of people, thereby enabling me to
+                experience the world from multiple perspectives.
+                <br>And my absolute favorite destination for travel is Japan! The rich cultural tapestry, stunning
+                natural beauty, and the blend of tradition with modernity make Japan an irresistible magnet for me. From
+                the serene temples of Kyoto to the bustling streets of Tokyo, every corner of Japan offers something
+                unique and captivating. Whether it's savoring the exquisite flavors of sushi or immersing myself in the
+                vibrant energy of Harajuku, Japan never fails to leave a lasting impression on me.
+            </p>
             <figure>
                 <img src="images/DSC04558.jpg" alt="Japanese Temple" width="800">
                 <img src="images/DSC04554.jpg" alt="Japanese Temple" width="800">
@@ -108,49 +119,157 @@
         <section id="who">
             <h2>Who</h2>
             <h3>About Me</h3>
-            <p>I'm an international student from China. I really enjoy connecting with people from diverse cultural backgrounds and traveling. I have a deep appreciation for Japanese anime culture and idol culture. I've been teaching myself Japanese because I find the language both adorable to write and delightful to read. I've traveled to Tokyo twice, spending about two weeks each time, which gave me plenty of time to explore. I hope to visit the northern and western cities of Japan for my next adventure!</p>
+            <p>I'm an international student from China. I really enjoy connecting with people from diverse cultural
+                backgrounds and traveling. I have a deep appreciation for Japanese anime culture and idol culture. I've
+                been teaching myself Japanese because I find the language both adorable to write and delightful to read.
+                I've traveled to Tokyo twice, spending about two weeks each time, which gave me plenty of time to
+                explore. I hope to visit the northern and western cities of Japan for my next adventure!</p>
             <figure>
                 <img src="images/IMG_20160831_182544_HDR.jpg" alt="Gundam Sculpture" width="500">
                 <img src="images/IMG_20160901_211335.jpg" alt="Cartoon Poster" width="500">
                 <figcaption>Photos taken by me at Tokyo in the fall of 2016.</figcaption>
             </figure>
         </section>
-        
+
         <section id="when">
             <h2>When</h2>
             <h3>Seasons</h3>
-            <p>Traveling is undoubtedly influenced by the seasons, and visiting the same place during different times of the year offers unique experiences! I've only been to Japan during the autumn season, where I could immerse myself in the vibrant atmosphere of summer and also enjoy the refreshing coolness of early fall. However, my plan is to visit during spring next time, to witness the blooming cherry blossoms. I also have a desire to experience Hokkaido's snowy landscapes during winter.</p>
+            <p>Traveling is undoubtedly influenced by the seasons, and visiting the same place during different times of
+                the year offers unique experiences! I've only been to Japan during the autumn season, where I could
+                immerse myself in the vibrant atmosphere of summer and also enjoy the refreshing coolness of early fall.
+                However, my plan is to visit during spring next time, to witness the blooming cherry blossoms. I also
+                have a desire to experience Hokkaido's snowy landscapes during winter.</p>
             <figure>
                 <img src="images/Cherry blossoms in Japan in spring.jpg" alt="Cherry Blossoms" width="500">
                 <img src="images/Hokkaido street view in winter.jpg" alt="Snow" width="500">
-                <figcaption>AI image: Prompt-Sakra in Japan &nbsp&nbsp&nbsp Prompt-Hokkaido street view in winter</figcaption>
+                <figcaption>AI image: Prompt - Sakra in Japan
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Prompt - Hokkaido street view in winter</figcaption>
             </figure>
         </section>
 
         <section id="where">
             <h2>Where</h2>
-            <h3>City</h3>
-            <p>Traveling is undoubtedly influenced by the seasons, and visiting the same place during different times of the year offers unique experiences! I've only been to Japan during the autumn season, where I could immerse myself in the vibrant atmosphere of summer and also enjoy the refreshing coolness of early fall. However, my plan is to visit during spring next time, to witness the blooming cherry blossoms. I also have a desire to experience Hokkaido's snowy landscapes during winter.</p>
+            <h3>Tourist Cities</h3>
+            <p>Japan offers a plethora of captivating cities, each with its own unique charm and attractions, making it
+                a haven for travelers.
+                Whether you seek bustling metropolises, serene landscapes, or rich cultural experiences, Japan's cities
+                offer something for every traveler to discover and enjoy.
+            </p>
+            <h4>Tokyo</h4>
+            <p>Tokyo, the bustling capital, blends modernity with tradition, boasting iconic landmarks like the historic
+                Senso-ji Temple and the futuristic Tokyo Skytree.</p>
             <figure>
-                <img src="images/Cherry blossoms in Japan in spring.jpg" alt="Cherry Blossoms" width="400">
-                <img src="images/Hokkaido street view in winter.jpg" alt="Snow" width="400">
-                <figcaption>AI-generated image:Prompt-Cherry blossoms in Japan      AI-generated image: Prompt - Hokkaido street view in winter</figcaption>
+                <img src="images/Tokyo Skytree full view.jpg" alt="Tokyo Skytree" width="500">
+                <figcaption>AI-generated image: Prompt - Tokyo Skytree full view</figcaption>
+            </figure>
+            <h4>Kyoto</h4>
+            <p>Kyoto, on the other hand, is a treasure trove of cultural wonders, with its majestic temples, serene
+                gardens, and traditional tea houses transporting visitors to Japan's ancient past.</p>
+            <figure>
+                <img src="images/Kyoto garden.jpg" alt="Kyoto Garden" width="500">
+                <figcaption>AI-generated image: Prompt - Kyoto garden</figcaption>
+            </figure>
+            <h4>Nara</h4>
+            <p>Nara, a city steeped in history and culture, is renowned for its stunning temples, serene parks, and the
+                iconic deer that roam freely throughout the city, offering travelers a unique and memorable experience
+                in Japan.</p>
+            <figure>
+                <img src="images/Nara park.jpg" alt="Park and Deer" width="500">
+                <figcaption>AI-generated image: Prompt - Nara park with deer</figcaption>
+            </figure>
+            <h4>Osaka</h4>
+            <p>Osaka, renowned for its vibrant street food scene, historical landmarks like Osaka Castle, and bustling
+                nightlife, offers travelers a dynamic blend of tradition and modernity in the heart of Japan.</p>
+            <figure>
+                <img src="images/Osaka Castle.jpg" alt="Osaka Castle" width="500">
+                <figcaption>AI-generated image: Prompt - Osaka Castle</figcaption>
             </figure>
         </section>
-       
+
+        <section id="how">
+            <h2>How</h2>
+            <h3>Transportation</h3>
+            <p>When traveling in Japan, it's essential to familiarize yourself with the country's efficient and extensive transportation network. The Japan Rail Pass offers unlimited travel on most JR trains, including the famous Shinkansen (bullet trains), making it a cost-effective option for exploring multiple cities.<br> 
+                For shorter distances within cities, the comprehensive subway systems in Tokyo, Osaka, and other major cities provide convenient and punctual services. Consider purchasing a prepaid IC card like Suica or Pasmo for seamless travel on trains, buses, and even some taxis. <br>
+                Additionally, renting a pocket Wi-Fi device can be immensely helpful for navigating Japan's intricate train schedules and using translation apps. Lastly, don't forget to check out regional passes and discount tickets available for specific areas or attractions, as they can offer substantial savings for your travels.</p>
+            <figure>
+                <img src="images/Japanese train.JPG" alt="Japanese Train" width="600">
+                <img src="images/Japanese station.jpg" alt="Japanese Station" width="600">
+                <figcaption>Japanese train and station - Photos taken by me at Tokyo.</figcaption>
+            </figure>
+        </section>
+
+        <section id="why">
+            <h2>Why</h2>
+            <h3>Something I like</h3>
+            <p>There are many reasons why I enjoy traveling in Japan. Here, I find my favorite idols, beloved anime characters, and all sorts of adorable knick-knacks. Often, I don't just visit famous landmarks; I prefer strolling through ordinary residential areas and streets, observing what the local markets have to offer, grabbing snacks from 24-hour convenience stores late at night, all while admiring their cute little houses along the way, spend the afternoon in the park. I really love this everyday life in Japan.</p>
+            <figure>
+                <img src="images/IMG_20160909_175737.jpg" alt="Stree View" width="550">
+                <img src="images/IMG_20160831_002149.jpg" alt="Snack" width="550">
+                <figcaption>Japanese street scenes and cute giveaways from convenience stores - Photos taken by me.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/IMG_20160909_141555.jpg" alt="Kids in the Park" width="550">
+                <img src="images/IMG_20160907_153852.jpg" alt="Kids in the Park" width="550">
+                <figcaption>Kids in the Park - Photos taken by me.</figcaption>
+            </figure>
+        </section>
+
+        <section id="AI">
+            <h2>AI Prompts</h2>
+            <h3>Design</h3>
+            <p>Tool: ChatGPT 3.5</p>
+            <p>Prompt: "Please generate the html code for a website with some sections and in light blue theme.</p>
+
+            <h3>Content</h3>
+            <p>Tool: ChatGPT 3.5</p>
+            <p>Prompt: "Please generate a paragraph to introduce some city good for travel in Japan"</p>
+            <p>Because my English proficiency isn't particularly strong, I often opt to write in Chinese first to enhance efficiency, then utilize translation software for the conversion. Almost all the content on this website has been initially composed in Chinese by me before employing AI assistance for translation.
+            <br>Prompt: "Please translate and revise the below paragraph to be more fluent and native in American English"</p>
+            
+            <h3>Image</h3>
+            <p>Tool: DeepAI</p>
+            <p>I have labeled all the images generated using AI with the corresponding prompts beneath each image.</p>
+            
+            <h3>JS Code</h3>
+            <p>Tool: ChatGPT 3.5</p>
+            <p>Prompt: "Please generate an example java script code when I click a section it only show that one and hide all oter sections."</p>
+            <p></p>
+        </section>
+
+        <section id="line" >
+            <p></p>
+        </section>
     </main>
+
     <footer>
-        <p>Designed by <a href=" " target="_blank">Celine Qin's Company(I don't have my design firm yet)</a> &copy;2024</p>
-        <a href="https://validator.w3.org/check?uri=https://celine740.github.io/itis3135/hobby/index.html" target="_blank">
-            <img src="images/button_validation_html.png" alt="HTML5 Validation"  width="100" >
+        <p>Designed by <a href=" " target="_blank">Celine Qin's Company(I don't have my design firm yet)</a> &copy;2024
+        </p>
+        <a href="https://validator.w3.org/check?uri=https://celine740.github.io/itis3135/hobby/index.html"
+            target="_blank">
+            <img src="images/button_validation_html.png" alt="HTML5 Validation" width="100">
         </a>
-        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://celine740.github.io/itis3135/hobby/index.html" target="_blank">
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://celine740.github.io/itis3135/hobby/index.html"
+            target="_blank">
             <img src="images/button_validation_css.png" alt="CSS Validation" width="100">
-        </a>    
+        </a>
         <a href="https://wave.webaim.org/report#/https://celine740.github.io/itis3135/hobby" target="_blank">
             <img src="images/button_validation_wcag.png" alt="WCAG Validation" width="100">
-        </a> 
+        </a>
     </footer>
-</body>
 
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+            var line = document.getElementById('line');
+            line.style.display = 'block';
+        }
+    </script>
+</body>
 </html>
