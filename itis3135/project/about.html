@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/about.css">
+</head>
+
+<body>
+
+<header>
+    <div data-include="components/header.html"></div>
+</header>
+
+<nav>
+    <ul>
+        <a href="./index.html">Home</a>
+        <a href="./shop.html">Shop</a>
+        <a class="active">About</a>
+    </ul>
+</nav>
+
+<main>  
+    <h1> About Winnie Peng </h1>
+    <p id="intrduction">
+        Hello, I'm Winnie Peng, the green thumb behind this garden sanctuary. My journey into gardening began as a small seed of curiosity and has blossomed into a life-enriching adventure. This garden is not just a collection of plants; it's a tapestry of life, woven with the threads of nature's own design.
+        My garden's story is one of transformation. From the first sprout breaking through the soil to the lush expanse you see today, each step has been a labor of love. I've faced challenges, from unpredictable weather to pesky pests, but the joy of nurturing life has always prevailed.
+        To me, gardening is more than just planting and harvesting; it's about creating harmony with nature. It's a dance with the seasons, a respect for the cycles of growth and decay, and a commitment to sustainability.      
+        Join me in celebrating the beauty of growth and the serenity of nature. Winnie's Garden is not just my story; it's a shared chapter in the book of life, inviting all who wander through to find peace and inspiration among its leaves.        
+    </p>
+
+    <h2> Contact Information </h2>
+    <div id="contact">
+        Phone: (980)-389-1061<br>
+        Email: <a href="mailto: winnie.chinaproduct@gmail.com">winnie.chinaproduct@gmail.com</a><br>
+        Location: 100 Sara Ln, Winston-Salem, NC<br>        
+        <img id="location" src="img/location.jpg">
+    </div>
+
+</main>
+
+<footer>
+    <div data-include="components/footer.html"></div>
+</footer>
+
+<script>
+    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
+<script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

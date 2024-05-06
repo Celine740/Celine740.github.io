@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celine Qin’s Calm Quokka&#128151;ITIS3135&#128151;Tables</title>
+    <link rel="stylesheet" href="styles/default.css">
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 3px solid #ddf0e9;
+            padding: 7px;
+            
+        }
+
+        th {
+            background-color: #7cb454;
+        }
+
+        tr:nth-child(even) {
+            background-color: #c4dcac;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #9dcc85;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        tr {
+            color: #16654a;
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+    <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2>Tables</h2>
+        <h3>My Tabular Data</h3>
+        <ol>
+            <li>Ash Lynx - ashlynx@gmail.com - 5 years</li>
+            <li>Eiji Okumura - eiji_okumura@yahoo.com - 3 years</li>
+            <li>Max Lobo - maxlobo@gmail.com - 8 years</li>
+            <li>Shunichi Ibe - shunichi_ibe@yahoo.com - 4 years</li>
+            <li>Sing Soo-Ling - singsooling@gmail.com - 2 years</li>
+            <li>Shorter Wong - shorter_wong@yahoo.com - 6 years</li>
+            <li>Yut-Lung Lee - yutlunglee@gmail.com - 9 years</li>
+        </ol>
+        
+        <br><br>
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Years of Service</th>
+            </tr>
+            <tr>
+                <td>Ash Lynx</td>
+                <td>ashlynx@gmail.com</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Eiji Okumura</td>
+                <td>eiji_okumura@yahoo.com</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Max Lobo</td>
+                <td>maxlobo@gmail.com</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Shunichi Ibe</td>
+                <td>shunichi_ibe@yahoo.com</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Sing Soo-Ling</td>
+                <td>singsooling@gmail.com</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Shorter Wong</td>
+                <td>shorter_wong@yahoo.com</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Yut-Lung Lee</td>
+                <td>yutlunglee@gmail.com</td>
+                <td>9</td>
+            </tr>
+        </table>
+
+        <br><br>
+        <h3>Employee Data in Complex Table</h3>
+<figure>
+    <figcaption >Employee Information</figcaption>
+    <table>
+        <tr>
+            <th id="category">Category</th>
+            <th id="name">Name</th>
+            <th id="email">Email</th>
+            <th id="year">Years of Service</th>
+            <th id="salary">Monthly Salary</th>
+        </tr>
+        <tr>
+            <td rowspan="2" headers="category">Marketing</td>
+            <td headers="name">Ash Lynx</td>
+            <td headers="email">ashlynx@gmail.com</td>
+            <td headers="year">5</td>
+            <td headers="salary">$5000</td>
+        </tr>
+        <tr>
+            <td headers="name">Sing Soo-Ling</td>
+            <td headers="email">singsooling@gmail.com</td>
+            <td headers="year">2</td>
+            <td headers="salary">$4500</td>
+        </tr>
+        <tr>
+            <td headers="category">Sales</td>
+            <td headers="name">Eiji Okumura</td>
+            <td headers="email">eiji_okumura@yahoo.com</td>
+            <td headers="year">3</td>
+            <td headers="salary">$4800</td>
+        </tr>
+        <tr>
+            <td rowspan="2" headers="category">Development</td>
+            <td headers="name">Max Lobo</td>
+            <td headers="email">maxlobo@gmail.com</td>
+            <td headers="year">8</td>
+            <td headers="salary">$6000</td>
+        </tr>
+        <tr>
+            <td headers="name">Shorter Wong</td>
+            <td headers="email">shorter_wong@yahoo.com</td>
+            <td headers="year">6</td>
+            <td headers="salary">$5500</td>
+        </tr>
+        <tr>
+            <td headers="category">Operations</td>
+            <td headers="name">Shunichi Ibe</td>
+            <td headers="email">shunichi_ibe@yahoo.com</td>
+            <td headers="year">4</td>
+            <td headers="salary">$5200</td>
+        </tr>
+        <tr>
+            <td headers="category">Manager</td>
+            <td headers="name">Yut-Lung Lee</td>
+            <td headers="email">yutlunglee@gmail.com</td>
+            <td headers="year">9</td>
+            <td headers="salary">$7000</td>
+        </tr>
+        <tr>
+            <td colspan="3" headers="category">Total Years of Service</td>
+            <td headers="year">37</td>
+            <td headers="salary">$38000</td>
+        </tr>
+    </table>
+</figure>
+
+
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+
+</html>

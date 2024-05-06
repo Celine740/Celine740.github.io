@@ -1,0 +1,28 @@
+main {
+    width: 100%;
+    padding: 20px;
+}
+
+main .plants {
+    padding: 100px 10px;
+    background: #ADCBCB;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .plant {
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+main .plant img {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 400px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}

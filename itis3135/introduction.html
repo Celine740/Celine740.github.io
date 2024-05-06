@@ -11,24 +11,7 @@
 
 <body>
     <header>
-        <h1>Celine Qin’s Calm Quokka &#128151; ITIS 3135</h1>
-
-        <nav>
-            <a href="./">Home</a>
-            &nbsp&#128151&nbsp;
-            <a href="introduction.html">Introduction</a>
-            &nbsp&#128151&nbsp;
-            <a href="contract.html">Contract</a>
-            &nbsp&#128151&nbsp;
-            <a href="https://webpages.charlotte.edu/xqin1/itis3135/hobby/">Hobby</a>
-            &nbsp&#128151&nbsp;
-            <a></a>
-            &nbsp&#128151&nbsp;
-            &nbsp&#128151&nbsp;
-            &nbsp&#128151&nbsp;
-            &nbsp&#128151&nbsp;
-            &nbsp&#128151&nbsp;
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
 
 
@@ -58,7 +41,7 @@
 
             <li><b>Primary Computer Platform: </b>Windows 10</li></br>
 
-            <li><b>Courses I'm Taking & Why:</b> 
+            <li><b>Courses I'm Taking & Why:</b>
                 <ul>
                     <li><b>ITIS-3135-Web App Design and Development: </b>Required and interested in.</li></br>
                     <li><b>ITSC-2175-Logic and Algorithms: </b>Required and interested in.</li></br>
@@ -68,48 +51,25 @@
                 </ul>
             </li></br>
 
-            <li><b>Funny/Interesting Item to Remember me by:</b>I want to pursue a career in VR.</li></br>
+            <li><b>Funny/Interesting Item to Remember me by: </b>I want to pursue a career in VR.</li></br>
 
-            <li><b>I'd also like to Share:</b>I am learning Japanese.</li></br>
+            <li><b>I'd also like to Share: </b>I am learning Japanese.</li></br>
         </ul>
 
-        
+
 
     </main>
 
     <footer>
-        <nav>
-            <a href="https://webpages.charlotte.edu/xqin1/">Charlotte.edu</a>
-            &nbsp&#128151&nbsp;
-            <a href="https://github.com/Celine740">Github</a>
-            &nbsp&#128151&nbsp;
-            <a href="https://celine740.github.io/">Gitub.io</a>
-            &nbsp&#128151&nbsp;
-            <a href="https://celine740.github.io/itis3135/">itis3135.io</a>
-            &nbsp&#128151&nbsp;
-            <a href="https://www.freecodecamp.org/Celine740">freeCodeCamp</a>
-            &nbsp&#128151&nbsp;
-            <a href="https://www.codecademy.com/profiles/Celine740">Codecademy</a>
-            &nbsp&#128151&nbsp;
-            <a href="https://www.linkedin.com/in/celine-qin/">LinkedIn</a>
-        </nav>
-        <p>Designed by <a href="calmquokka.com" target="_blank">Qin's Company</a> &copy;2024</p>
-        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
-            <img style="border:0;width:88px;height:31px"
-                src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-        </a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
-            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
-                alt="Valid CSS!">
-        </a>
-
-
+        <div data-include="components/footer.html"></div>
     </footer>
 
-</body>
-<script>
-    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 
-</script>
+</body>
+
 </html>

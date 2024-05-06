@@ -1,0 +1,30 @@
+body {
+    background: #ADCBCB;
+}
+h1,h2{
+    text-align: center;
+    color: rgb(16, 65, 59);
+    padding-top: 30px;
+
+}
+
+#intrduction{
+    padding: 15px 80px;
+    font-size: 25px;
+    line-height: 50px;
+    color:rgb(23, 94, 85); 
+}
+
+#contact{
+    padding: 15px 50px;
+    font-size: 28px;
+    line-height: 60px;
+    color: rgb(23, 94, 85);
+    text-align: center;
+}
+
+#location{
+    width: 30%;
+    height: 30%;
+    padding-bottom: 10px;
+}

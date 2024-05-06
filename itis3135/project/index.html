@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Winnie's Garden</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<header>
+    <div data-include="components/header.html"></div>
+</header>
+<nav>
+    <ul>
+        <a class="active">Home</a>
+        <a href="./shop.html">Shop</a>
+        <a href="./about.html">About</a>
+    </ul>
+</nav>
+
+<main>
+    <div class="banner">
+        <img src="./img/Garden/Weixin%20Image_20240501021717.jpg" alt="">
+        <img src="./img/Garden/Weixin%20Image_20240501021745.jpg" alt="">
+        <img src="./img/Garden/Weixin%20Image_20240501021755.jpg" alt="">
+        <img src="./img/Garden/Weixin%20Image_20240501021800.jpg" alt="">
+        <img src="./img/Garden/Weixin%20Image_20240501021808.jpg" alt="">
+        <img src="./img/Garden/Weixin%20Image_20240501021815.jpg" alt="">
+        <img src="./img/Garden/Weixin%20Image_20240501021821.jpg" alt="">
+        <img src="./img/Garden/Weixin%20Image_20240501021836.jpg" alt="">
+        <img src="./img/Garden/Weixin%20Image_20240501021908.jpg" alt="">
+        <div class="btn btn-prev">&lt;</div>
+        <div class="btn btn-next">&gt;</div>
+        <div class="indicator">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div id="intro">
+        <h2>Welcome to Winnie's Garden!</h2>
+        <p>A verdant oasis cultivated with love and dedication. Here, every plant tells a story, and every bloom reflects the passion of its gardener.</p>
+    </div>
+</main>
+
+<footer>
+    <div data-include="components/footer.html"></div>
+</footer>
+
+<script>
+    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
+<script src="scripts/HTMLInclude.min.js"></script>
+
+<script>
+    const bannerImgs = document.querySelectorAll('.banner img');
+    const prevBtn = document.querySelector('.btn-prev');
+    const nextBtn = document.querySelector('.btn-next');
+    const indicatorSpans = document.querySelectorAll('.indicator span');
+
+    let currentIndex = 0;
+    let interval = setInterval(nextImage, 2000);
+
+    prevBtn.addEventListener('click', prevImage);
+    nextBtn.addEventListener('click', nextImage);
+
+    indicatorSpans.forEach((span, index) => {
+        span.addEventListener('click', () => {
+            currentIndex = index;
+            showImage(currentIndex);
+        });
+    });
+
+    showImage(currentIndex);
+
+    function showImage(index) {
+        bannerImgs.forEach((img, i) => {
+            img.style.display = i === index ? 'block' : 'none';
+        });
+        indicatorSpans.forEach((span, i) => {
+            span.classList.toggle('active', i === index);
+        });
+        clearInterval(interval);
+        interval = setInterval(nextImage, 2000);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + bannerImgs.length) % bannerImgs.length;
+        showImage(currentIndex);
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % bannerImgs.length;
+        showImage(currentIndex);
+    }    
+</script>
+
+</body>
+</html>

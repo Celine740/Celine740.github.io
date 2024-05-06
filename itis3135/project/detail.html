@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/detail.css">
+</head>
+<body>
+<header>
+    <div class="title">
+        Winnie's Garden
+    </div>
+</header>
+
+<main>
+    <div class="plantImg">
+        <img src="" alt="plant image">
+    </div>
+    <div class="plantInfo">
+        <h1 class="title">plant name</h1>
+        <h2 class="price">plant price</h2>
+        <div>
+            <div><h6>Quantity</h6></div>
+            <input type="number" min="1" value="1">
+        </div>
+        <div class="wrap">
+            <button class="checkoutBtn">Check Out</button>
+        </div>
+    </div>
+    <a class="backBtn" href="./shop.html">Back To Shop</a>
+</main>
+
+<footer>
+    <div data-include="components/footer.html"></div>
+</footer>
+
+<script>
+    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
+<script src="scripts/HTMLInclude.min.js"></script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const img = urlParams.get('img');
+    const title = urlParams.get('title');
+    const price = urlParams.get('price');
+
+    document.querySelector('.plantImg img').src = decodeURIComponent(img);
+    document.querySelector('.plantInfo .title').textContent = decodeURIComponent(title);
+    document.querySelector('.plantInfo .price').textContent = decodeURIComponent(price);
+    document.querySelector('.checkoutBtn').onclick = function () {
+        window.location.href = `./check.html?${urlParams.toString()}&count=${document.querySelector('input').value}`;
+    }
+</script>
+</body>
+</html>

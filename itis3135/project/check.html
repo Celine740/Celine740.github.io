@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Out</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/check.css">
+</head>
+<body>
+<header>
+    <div data-include="components/header.html"></div>
+</header>
+<main>
+    <div class="shippingAddress">
+        <h2>Contact</h2>
+        <div class="nameInput">
+            <input type="text" placeholder="First Name" required/>
+            <input type="text" placeholder="Last Name" required/>
+        </div>
+        <div>
+            <input type="text" placeholder="Phone" required>
+        </div>
+        <div>
+            <input type="text" placeholder="Email" required>
+        </div>
+        <h2>Address</h2>
+        <div>
+            <input type="text" placeholder="66 street, New York, NY 10001" required/>
+        </div>
+        <div class="btns">
+            <a href="./shop.html">Back</a>
+            <button onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+    <div class="Total">
+        <div class="picInfo">
+            <div class="pic">
+                <img id="product-img" src="./img/Plants/Callalily.png" alt="">
+            </div>
+            <div class="name">
+                <span id="product-name">Name</span>
+            </div>
+        </div>
+        <div class="price">
+            <h5 id="subtotal">Subtotal:</h5>
+            <h5>Shipping: $3.00</h5>
+            <br>
+            <hr>
+            <br>
+            <h4 id="total">Total:</h4>
+        </div>
+    </div>
+</main>
+
+<footer>
+   
+</footer>
+
+<script>
+    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
+<script src="scripts/HTMLInclude.min.js"></script>
+
+<script>
+    function getUrlParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            img: params.get('img'),
+            title: params.get('title'),
+            price: params.get('price').replace('＄', ''),
+            count: parseInt(params.get('count'))
+        };
+    }
+
+    function fillElements() {
+        const {img, title, price, count} = getUrlParams();
+
+        const productImg = document.getElementById('product-img');
+        productImg.src = img;
+
+        const productName = document.getElementById('product-name');
+        productName.textContent = title;
+
+        const subtotal = price * count;
+        const subtotalElement = document.getElementById('subtotal');
+        subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+
+        const shipping = 3;
+        const total = subtotal + shipping;
+        const totalElement = document.getElementById('total');
+        totalElement.textContent = `Total: $${total.toFixed(2)}`;
+    }
+
+    window.addEventListener('DOMContentLoaded', fillElements);
+
+    function placeOrder() {
+        const inputs = document.querySelectorAll('.shippingAddress input');
+
+        for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].value.trim() === '') {
+                alert('Please fill in all the required fields.');
+                return;
+            }
+        }
+
+        const orderInfo = {
+            firstName: inputs[0].value,
+            lastName: inputs[1].value,
+            phone: inputs[2].value,
+            email: inputs[3].value,
+            address: inputs[4].value
+        };
+
+        const totalPriceElement = document.getElementById('total');
+        const totalPrice = parseFloat(totalPriceElement.textContent.replace('Total: $', ''));
+
+        alert(`
+        Order Info:\n
+            First Name: ${orderInfo.firstName}
+            Last Name: ${orderInfo.lastName}
+            Phone: ${orderInfo.phone}
+            Email: ${orderInfo.email}
+            Address: ${orderInfo.address}
+            Total Price: $${totalPrice.toFixed(2)}\n
+        Thank you for your purchase!
+        `);
+    }
+</script>
+</body>
+</html>

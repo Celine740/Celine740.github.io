@@ -48,17 +48,26 @@ main {
     text-align: left;
     margin-left: 20%;
     margin-right: 20% ;
+    line-height: 30px;
 }
 
 h2 {
     text-align: center;
 }
 
+
+
 figure {
     text-align: center;
     font-style: italic;
 }
 
+#no {
+    background-color: rgb(85, 136, 216);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
 /* figcaption {
     font-style: italic;
     color: #334D67;

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celine Qin’s Calm Quokka&#128151;ITIS3135&#128151;Forms</title>
+    <link rel="stylesheet" href="styles/default.css">
+
+    <style>
+        label {
+            display: block;
+            margin: 0.5rem 0;
+            color: #1d8fab
+        }
+
+        button {
+            background-color: #096728; 
+            color: #ddf0e9; 
+            padding: 10px 50px; 
+            margin: 5px 20px;
+            border-radius: 20cm; 
+            cursor: pointer; 
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        input[type="text"],input[type="tel"],input[type="email"],
+        select {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+}
+
+        fieldset {
+            border: 3px solid #d2ef52;
+            border-radius: 10px;
+        }
+
+        legend {
+            color: #d2ef52;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+
+
+    <main>
+        <h2>Forms</h2>
+        <h3>Rent Your Quokka!</h3>
+        <form action="#" method="post" id="quokka-rental-form">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Magic Options</legend>                
+                <label for="soothe"><input type="checkbox" id="soothe" name="rental-option" value="Soothe">Soothing Magic</label>
+                <label for="heal"><input type="checkbox" id="heal" name="rental-option" value="Heal">Healing Magic</label>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Quokka Preference</legend>                
+                <label for="happy"><input type="radio" id="happy" name="quokka-preference" value="Happy" checked>Happy Quokka</label>
+                <label for="sad"><input type="radio" id="sad" name="quokka-preference" value="Sad">Sad Quokka</label>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Rental Duration</legend>
+                <select id="duration" name="duration" required>
+                    <option value="">Select duration</option>
+                    <option value="1">1 day</option>
+                    <option value="3">3 days</option>
+                    <option value="7">1 week</option>
+                    <option value="30">1 month</option>
+                </select>
+            </fieldset><br>
+
+            <div class="button-container">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/shop.css">
+</head>
+<body>
+<header>
+    <div data-include="components/header.html"></div>
+</header>
+<nav>
+    <ul>
+        <a href="./index.html">Home</a>
+        <a class="active">Shop</a>
+        <a href="./about.html">About</a>
+    </ul>
+</nav>
+
+<main>
+    <div class="plants">
+        <div class="plant">
+            <img src="./img/Plants/Bigonia%20Capreolata.png" alt="">
+            <h4>Bigonia Capreolata</h4>
+            <div>＄15</div>
+        </div>
+        <div class="plant">
+            <img src="./img/Plants/Blackberry%20Tree%201.png" alt="">
+            <h4>Blackberry Tree</h4>
+            <div>＄15</div>
+        </div>
+        <div class="plant">
+            <img src="./img/Plants/Blueberry%20Tree%201.png" alt="">
+            <h4>BlueBerry Tree</h4>
+            <div>＄15</div>
+        </div>
+        <div class="plant">
+            <img src="./img/Plants/Callalily.png" alt="">
+            <h4>Callalily</h4>
+            <div>＄15</div>
+        </div>
+        <div class="plant">
+            <img src="./img/Plants/Excalibur%20Yucca%201.png" alt="">
+            <h4>Excalibur Yucca</h4>
+            <div>＄15</div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div data-include="components/footer.html"></div>
+</footer>
+
+<script>
+    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
+<script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+<script>
+    const plantItems = document.querySelectorAll('.plant');
+
+    plantItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img').src;
+            const title = item.querySelector('h4').textContent;
+            const price = item.querySelector('div').textContent;
+
+            window.location.href = `detail.html?img=${img}&title=${title}&price=${price}`;
+        });
+    });
+</script>
+</html>
