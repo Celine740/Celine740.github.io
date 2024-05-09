@@ -8,7 +8,7 @@
     <style>
         a {
             text-decoration: none;
-            color:#092F42;
+            color: #092F42;
             font-size: 0.9em;
         }
 
@@ -79,7 +79,13 @@
             font-style: italic;
             color: #334D67;
         }
-     
+
+        @media screen and (min-width: 981px) and (max-width: 1400px) {}
+
+        @media screen and (min-width: 601px) and (max-width: 980px) {}
+
+        @media screen and (min-width: 370px) and (max-width: 600px) {}
+        
     </style>
 </head>
 
@@ -96,7 +102,7 @@
         <a href="#why" onclick="showSection('why')">Why</a>
         <a href="#AI" onclick="showSection('AI')">AI Prompts</a>
     </nav>
-    
+
     <main>
         <section id="home">
             <h2>What</h2>
@@ -191,9 +197,17 @@
         <section id="how">
             <h2>How</h2>
             <h3>Transportation</h3>
-            <p>When traveling in Japan, it's essential to familiarize yourself with the country's efficient and extensive transportation network. The Japan Rail Pass offers unlimited travel on most JR trains, including the famous Shinkansen (bullet trains), making it a cost-effective option for exploring multiple cities.<br> 
-                For shorter distances within cities, the comprehensive subway systems in Tokyo, Osaka, and other major cities provide convenient and punctual services. Consider purchasing a prepaid IC card like Suica or Pasmo for seamless travel on trains, buses, and even some taxis. <br>
-                Additionally, renting a pocket Wi-Fi device can be immensely helpful for navigating Japan's intricate train schedules and using translation apps. Lastly, don't forget to check out regional passes and discount tickets available for specific areas or attractions, as they can offer substantial savings for your travels.</p>
+            <p>When traveling in Japan, it's essential to familiarize yourself with the country's efficient and
+                extensive transportation network. The Japan Rail Pass offers unlimited travel on most JR trains,
+                including the famous Shinkansen (bullet trains), making it a cost-effective option for exploring
+                multiple cities.<br>
+                For shorter distances within cities, the comprehensive subway systems in Tokyo, Osaka, and other major
+                cities provide convenient and punctual services. Consider purchasing a prepaid IC card like Suica or
+                Pasmo for seamless travel on trains, buses, and even some taxis. <br>
+                Additionally, renting a pocket Wi-Fi device can be immensely helpful for navigating Japan's intricate
+                train schedules and using translation apps. Lastly, don't forget to check out regional passes and
+                discount tickets available for specific areas or attractions, as they can offer substantial savings for
+                your travels.</p>
             <figure>
                 <img src="images/Japanesetrain.JPG" alt="Japanese Train" width="600">
                 <img src="images/Japanesestation.jpg" alt="Japanese Station" width="600">
@@ -204,11 +218,17 @@
         <section id="why">
             <h2>Why</h2>
             <h3>Something I like</h3>
-            <p>There are many reasons why I enjoy traveling in Japan. Here, I find my favorite idols, beloved anime characters, and all sorts of adorable knick-knacks. Often, I don't just visit famous landmarks; I prefer strolling through ordinary residential areas and streets, observing what the local markets have to offer, grabbing snacks from 24-hour convenience stores late at night, all while admiring their cute little houses along the way, spend the afternoon in the park. I really love this everyday life in Japan.</p>
+            <p>There are many reasons why I enjoy traveling in Japan. Here, I find my favorite idols, beloved anime
+                characters, and all sorts of adorable knick-knacks. Often, I don't just visit famous landmarks; I prefer
+                strolling through ordinary residential areas and streets, observing what the local markets have to
+                offer, grabbing snacks from 24-hour convenience stores late at night, all while admiring their cute
+                little houses along the way, spend the afternoon in the park. I really love this everyday life in Japan.
+            </p>
             <figure>
                 <img src="images/IMG_20160909_175737.jpg" alt="Stree View" width="550">
                 <img src="images/IMG_20160831_002149.jpg" alt="Snack" width="550">
-                <figcaption>Japanese street scenes and cute giveaways from convenience stores - Photos taken by me.</figcaption>
+                <figcaption>Japanese street scenes and cute giveaways from convenience stores - Photos taken by me.
+                </figcaption>
             </figure>
             <figure>
                 <img src="images/IMG_20160909_141555.jpg" alt="Kids in the Park" width="550">
@@ -226,16 +246,21 @@
             <h3>Content</h3>
             <p>Tool: ChatGPT 3.5</p>
             <p>Prompt: "Please generate a paragraph to introduce some city good for travel in Japan"</p>
-            <p>Because my English proficiency isn't particularly strong, I often opt to write in Chinese first to enhance efficiency, then utilize translation software for the conversion. Almost all the content on this website has been initially composed in Chinese by me before employing AI assistance for translation.
-            <br>Prompt: "Please translate and revise the below paragraph to be more fluent and native in American English"</p>
-            
+            <p>Because my English proficiency isn't particularly strong, I often opt to write in Chinese first to
+                enhance efficiency, then utilize translation software for the conversion. Almost all the content on this
+                website has been initially composed in Chinese by me before employing AI assistance for translation.
+                <br>Prompt: "Please translate and revise the below paragraph to be more fluent and native in American
+                English"
+            </p>
+
             <h3>Image</h3>
             <p>Tool: DeepAI</p>
             <p>I have labeled all the images generated using AI with the corresponding prompts beneath each image.</p>
-            
+
             <h3>JS Code</h3>
             <p>Tool: ChatGPT 3.5</p>
-            <p>Prompt: "Please generate an example java script code when I click a section it only show that one and hide all oter sections."</p>
+            <p>Prompt: "Please generate an example java script code when I click a section it only show that one and
+                hide all oter sections."</p>
             <p></p>
         </section>
 
@@ -245,7 +270,8 @@
     </main>
 
     <footer>
-        <p>Designed by <a href="https://webpages.charlotte.edu/xqin1/itis3135/qin.com/" target="_blank">Qin's Company</a> &copy;2024
+        <p>Designed by <a href="https://webpages.charlotte.edu/xqin1/itis3135/qin.com/" target="_blank">Qin's
+                Company</a> &copy;2024
         </p>
         <a href="https://validator.w3.org/check?uri=https://celine740.github.io/itis3135/hobby/index.html"
             target="_blank">
@@ -263,7 +289,7 @@
     <script>
         function showSection(sectionId) {
             var sections = document.querySelectorAll('section');
-            sections.forEach(function(section) {
+            sections.forEach(function (section) {
                 section.style.display = 'none';
             });
             var selectedSection = document.getElementById(sectionId);
@@ -272,4 +298,5 @@
         }
     </script>
 </body>
+
 </html>
